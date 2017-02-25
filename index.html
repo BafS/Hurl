@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HURL</title>
-    <!--<link rel="stylesheet" href="build/style.css">-->
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <script src="build/hurl.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mu/0.3.0/mu.min.css" />
-<style>
-textarea {
-    height: 300px;
-    width: 100%;
-}
-
-.editor-panel {
-    max-width: 800px;
-    display: block;
+  <title>HURL</title>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <script src="build/hurl.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mu/0.3.0/mu.min.css" />
+  <style>
+  .content-panel .footer {
+    margin-top: 30px;
+    text-align: right;
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    font-size: 11pt;
+  }
+  .content-panel .edit-link {
+    cursor: pointer;
+  }
+  .editor-panel {
     margin: 0 auto;
     max-width: 100%;
     display: none;
-}
-</style>
-
+  }
+  .editor-panel textarea {
+    height: 300px;
+    width: 100%;
+  }
+  .text-muted {
+    color: #777;
+  }
+  </style>
 </head>
 <body>
-    <div class="view-panel">
-        <div class="content"></div>
+  <div class="content-panel">
+    <div class="content"></div>
+    <div class="footer">
+      [<a href="/">Hurl main page</a>]
+      [<a class="edit-link">edit this Hurl</a>]
     </div>
+  </div>
 
-    <div class="editor-panel">
-        <h1>HURL</h1>
+  <div class="editor-panel">
+    <h1>HURL</h1>
+    <p class="text-muted"><em>A database free pastebin</em></p>
 
-        <textarea id="editor"></textarea><br>
-        <button id="submit">Publish your HURL</button>
-    </div>
-<script src="app.js"></script>
+    <textarea id="editor"></textarea><br>
+    <button id="submit">Publish your Hurl</button>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+{
+    "extends": "standard",
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "marked": true,
+        "pako": true
+    }
+}
