@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HURL</title>
+    <!--<link rel="stylesheet" href="build/style.css">-->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <script src="build/hurl.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mu/0.3.0/mu.min.css" />
+<style>
+textarea {
+    height: 300px;
+    width: 100%;
+}
+
+.editor-panel {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    display: none;
+}
+</style>
+
+</head>
+<body>
+    <div class="view-panel">
+        <div class="content"></div>
+    </div>
+
+    <div class="editor-panel">
+        <h1>HURL</h1>
+
+        <textarea id="editor"></textarea><br>
+        <button id="submit">Publish your HURL</button>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "hurl",
+  "version": "0.1.0",
+  "description": "hurl your content",
+  "main": "app.js",
+  "dependencies": {
+    "marked": "^0.3.6",
+    "pako": "^1.0.4",
+    "remarkable": "^1.7.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hurl"
+  ],
+  "author": "Fabien Sa",
+  "license": "MIT"
+}
