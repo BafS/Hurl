@@ -38,7 +38,7 @@ function loadEditor () {
 
     var b64 = window.btoa(binaryString)
 
-    var fullUrl = window.location.origin + '#' + b64.replace(/\//g, '_')
+    var fullUrl = window.location.href.split('#')[0] + '#' + b64.replace(/\//g, '_')
 
     window.location = fullUrl
   })
@@ -63,7 +63,7 @@ function loadContent () {
   var editEl = document.querySelectorAll('.edit-link')[0]
   editEl.addEventListener('click', function (e) {
     e.preventDefault()
-    var fullUrl = window.location.origin + '#edit:' + getUrlB64Content().replace(/\//g, '_')
+    var fullUrl = window.location.href.split('#')[0] + '#edit:' + getUrlB64Content().replace(/\//g, '_')
 
     window.location = fullUrl
   })
