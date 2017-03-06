@@ -25,16 +25,15 @@ function getUrlContent () {
 
 function loadEditor () {
   var submitEl = document.querySelectorAll('#submit')[0]
-  var editorEl = document.querySelectorAll('#editor')[0]
 
   editorPanelEl.style.display = 'block'
 
   if (window.location.hash.substr(0, 6) === '#edit:') {
-    editorEl.value = getUrlContent()
+    simplemde.value(getUrlContent())
   }
 
   submitEl.addEventListener('click', function () {
-    var binaryString = pako.deflate(editorEl.value, {to: 'string'})
+    var binaryString = pako.deflate(simplemde.value(), {to: 'string'})
 
     var b64 = window.btoa(binaryString)
 
@@ -82,6 +81,14 @@ function hashChanged () {
     hideEditor()
   }
 }
+
+var simplemde = new SimpleMDE({ 
+    element: document.getElementById('editor'),
+    autofocus: true,
+    spellChecker: false,
+    hideIcons: ['guide'],
+    showIcons: ['code']
+})
 
 var editorPanelEl = document.querySelectorAll('.editor-panel')[0]
 var contentPanelEl = document.querySelectorAll('.content-panel')[0]
