@@ -73,11 +73,11 @@ function hashChanged () {
 }
 
 var simplemde = new SimpleMDE({ 
-    element: document.getElementById('editor'),
-    autofocus: true,
-    spellChecker: false,
-    hideIcons: ['guide'],
-    showIcons: ['code']
+  element: document.getElementById('editor'),
+  autofocus: true,
+  spellChecker: false,
+  hideIcons: ['guide'],
+  showIcons: ['code']
 })
 
 var editorPanelEl = document.querySelectorAll('.editor-panel')[0]

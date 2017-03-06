@@ -15,6 +15,12 @@
     padding: 15px 0;
     font-size: 11pt;
   }
+  .forkme {
+    font-size: 11pt;
+    position: absolute;
+    right: 6px;
+    top: 3px;
+  }
   .content-panel .edit-link {
     cursor: pointer;
   }
@@ -30,8 +36,21 @@
   .text-muted {
     color: #777;
   }
+  #submit {
+    text-transform: uppercase;
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid #444;
+  }
+  #submit:hover {
+    background: #eee;
+  }
   .CodeMirror .cm-header {
     font-family: sans-serif;
+  }
+  blockquote {
+    border-left: 3px solid #ddd;
+    padding-left: 15px;
   }
   </style>
 </head>
@@ -48,8 +67,11 @@
     <h1>HURL</h1>
     <p class="text-muted"><em>A database free pastebin</em></p>
 
-    <textarea id="editor"></textarea><br>
+    <textarea id="editor"></textarea>
     <button id="submit">Publish your Hurl</button>
+    <div class="forkme">
+      [<a href="https://github.com/BafS/Hurl">fork me on github</a>]
+    </div>
   </div>
   <script src="build/hurl.js"></script>
 </body>
